@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="showRecords()">
+    
+  
+</body>
+<script>
+    let records = [
+        {
+            regno:12,
+            name:"shafeeq", 
+            dept: "IT",
+        },
+        {
+            regno:52,
+            name:"james", 
+            dept: "HR",
+
+        },
+        {
+            regno:112,
+            name:"peter", 
+            dept: "HR",
+        }, 
+        {
+            regno:2,
+            name:"Jennifer", 
+            dept: "Accounting",
+
+        }
+
+    ]
+    function showRecords(){
+        let table1 = document.createElement("table")  //creates table
+        let row= document.createElement("tr")         // creates row
+        let td1 = document.createElement("td")        // creates column
+        let td2 = document.createElement("td")
+        let td3 = document.createElement("td")
+        let td4 =  document.createElement("td")
+
+        td1.innerHTML="Registration"
+        td2.innerHTML="Name"
+        td3.innerHTML="Department"
+        td4.innerHTML="Operations"
+
+        // added tds to the row 
+        row.appendChild(td1)
+        row.appendChild(td2)
+        row.appendChild(td3)
+        row.appendChild(td4)
+
+        //add row to the table
+        table1.appendChild(row)
+        document.body.appendChild(table1)
+
+        for(let i=0;i<records.length;i++){
+            let row = document.createElement("tr")         // creates row
+            let td1 = document.createElement("td")        // creates column
+            let td2 = document.createElement("td")
+            let td3 = document.createElement("td")
+            let td4 =  document.createElement("td")
+
+            td1.innerHTML=records[i].regno
+            td2.innerHTML=records[i].name
+            td3.innerHTML=records[i].dept
+
+            let button = document.createElement("input")
+            button.type="button"
+            button.value="Delete"
+            
+            td4.appendChild(button)
+
+            row.appendChild(td1)
+            row.appendChild(td2)
+            row.appendChild(td3)
+            row.appendChild(td4)
+            
+            table1.appendChild(row)
+        }
+        document.body.appendChild(table1)
+    }
+</script>
+</html>
