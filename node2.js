@@ -71,40 +71,48 @@
     // }
     // add("Merisa", 13,15,16)
 
-    function addition(){
-        let total=0
-        for(let i=0; i<arguments.length;i++){
-            total+=arguments[i]
+    // function addition(){
+    //     let total=0
+    //     for(let i=0; i<arguments.length;i++){
+    //         total+=arguments[i]
+    //     }
+    //     console.log("The result of addition is " + total)
+    // }
+    // addition(34,100,200)
+
+
+
+
+
+    let functions=[] //functions is just the name of the array
+
+    functions.push(function(){console.log("Hello")})
+    functions.push(function(){
+        for(let i=0; i<10; i++){
+            console.log(i)
         }
-        console.log("The result of addition is " + total)
-    }
-    addition(34,100,200)
+    })
 
-
-
-
-
-    // let functions=[] //functions is just the name of the array
-
-    // functions.push(function(){console.log("Hello")})
-    // functions.push(function(){
-    //     for(let i=0; i<10; i++){
-    //         console.log(i)
-    //     }
-    // })
-
-    // for(let i=0; i<functions.length;i++){
-    //     functions[i]();
-    //     }
+    for(let i=0; i<functions.length;i++){
+        functions[i]();
+        }
 
     // Task 
     // hello shafeeq hi shafeeq hello james 
-    // the function should print - hello shefeeq hi james
+    // the function should print - hello shafeeq hi james
     // The duplicates should be printed only once
-    // let greetings = "hello shafeeq hi shafeeq hello james"
+    // let greetings = ["hello","shafeeq", "hi", "shafeeq", "hello", "james"]
+    // greetings.push(function(){console.log("Hello")})
+
+    // function print(){
+
+    // }
 
     // function removeDuplicate(){
-    //     if()
+    //     for(let i=0;i<=greetings.length;i++){
+    //         console.log(greetings.value);
+    //     }
     // }
+    // removeDuplicate();
 
 
