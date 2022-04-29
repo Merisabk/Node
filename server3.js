@@ -17,10 +17,11 @@ let f = function(request, response) {
         response.end()
     }
 
-    if(requestDetails.pathname== "/printing"){
+    if(requestDetails.pathname == "/printing"){
         response.writeHead(200, {'Content-Type': 'text/html'});
         let T=parseInt(data.num)
         response.write(`<h1> <center> Times table of ${T}</h1>`)
+        
         for (let i=1; i<=10;i++){
             response.write(`${T} x ${i} = ${T*i} <br>`)
         }

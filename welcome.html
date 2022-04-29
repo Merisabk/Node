@@ -1,0 +1,37 @@
+<html>
+    <body>
+    <h1>
+        <center>Welcome to my world</center>
+    </h1>
+
+    <br>
+    <br>
+
+    <form action="http://localhost:4005/process" method="post" onsubmit="check()">
+        First Number: <input id="num1" type="text" name="no1" > <br>
+        Second Number: <input id="num2" type="text" name="no2" > <br>
+        <input type="submit">
+    </form>
+</body>
+    <script>
+        function check(){
+            if (num1.value == "")
+            {
+            alert("enter first number")
+            event.preventDefault()
+         
+        }
+        else {
+            if(num2.value == "") {
+                alert("enter second number")
+                event.preventDefault()
+            }
+        }
+}
+            
+            
+        
+    </script>
+
+
+</html>

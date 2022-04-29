@@ -6,6 +6,10 @@
 // server.listen(4005);
 
 
+//Inside the response object there are many methods - one of them is with the name of write
+// - write method is responsible to create yoour html file at runtime 
+//response.end - sends the method to the browser. 
+
 // let refHTTP = require('http')
 // let f = function(request,response){
 //     console.log("Hello friends")

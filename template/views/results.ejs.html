@@ -1,0 +1,55 @@
+<html>
+    <style>
+        h1{
+            color:green;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td> <%= name %> </td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td> <%= phy %> </td>
+        </tr>
+        <tr>
+            <td>Chemistry</td>
+            <td> <%= che %> </td>
+        </tr>
+        <tr>
+            <td>Maths</td>
+            <td> <%= mat %> </td>
+        </tr>
+
+        <tr>
+            <td>Total Marks</td>
+            <td>Percentage</td>
+            <td>
+                <%= (phy+che+mat)*100/450 %></td>
+        </tr>
+
+    <% 
+        let remarks 
+        let color
+        let per=(phy+che+mat)*100/450
+        if(per>=60){
+            remarks = "Passed"
+            color="green"
+        } else {
+            remarks= "failed"
+            color= "red"
+        }
+        %>
+
+
+        <tr bgcolor="<%= color %>">
+            <td> Remarks</td>
+            <td> <%= remarks %> </td>
+        </tr>
+
+        
+
+    </table>
+</html>
