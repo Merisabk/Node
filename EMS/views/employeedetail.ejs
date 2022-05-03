@@ -2,11 +2,18 @@
     <a href="http://localhost:4005/">Home</a>
     <br>
     <br>
-<table border="1">
-    <tr> <td>Employee name: <%=employee %> </td></tr> <br> 
-    <tr> <td>Department: </td> </tr> <br>
-    <tr> <td>Salary: </td> </tr> <br>
-    <tr> <td>Tax: </td> </tr> <br>
+<table border="1"> 
+    <tr> <td>Employee name: <%= employee %> </td></tr> <br>
+
+    <tr> <td>Department: <%= department%>  </td> </tr> <br>
+    <tr> <td>Salary: <%= salary  %>  </td> </tr> <br>
+    <tr> <td>Tax: <% if (salary >= 2000){
+                tax = salary * 0.20  }
+                if (salary < 2000) {
+                    tax = salary * 0.15
+                } %>
+                <%= tax %>
+             </td> </tr> <br>
 
 </table>
 

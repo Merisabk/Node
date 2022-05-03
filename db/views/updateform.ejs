@@ -1,0 +1,19 @@
+<html>
+
+<form action="http://localhost:4005/processUpdateForm" method="post">
+Employee number<input type="text" name="empno" value="<%= data[0].empno %>">
+Name:<input name="ename" value="<%= data[0].name %>"> <br>
+Salary:<input name="esalary" value="<%= data[0].salary %>"> <br>                
+Department: 
+<select name="edeptname">
+    <option value='IT'> Information Techonology </option>
+    <option value='HR'> Human Resource </option>
+    <option value='Sales'> Sales </option>
+</select>
+
+<input type="submit">
+</form>
+
+
+
+</html>

@@ -16,41 +16,29 @@
            let i =0;
            employee.forEach(function(data){ %>
                 <tr>
+                    <!-- <% console.log(data) %> -->
                    <td> <%= data.empno %> </td>
-                   <td><a href="http://localhost:4005/employeedetail"> <%= data.empname %> </a></td>
+                   <td>
+                    <!-- <a href="http://localhost:4005/employeedetail/<%= data.empno %>"> <%= data.empname %> </a> -->
+                       <a href="http://localhost:4005/employeedetail/<%= data.empname %>/<%= data.dept %>/<%= data.salary %>"> <%= data.empname %> </a>
+                </td>
                    
                     <td> <%
-                       if(data.dept == 1) {
-                          deptname="IT"    
-                      }
-                      if (data.dept == 2){
-                          deptname="Sales"    
-                      }
-                      if (data.dept == 3){
-                          deptname="HR"    
-                      }
-                  
+                        let deptname=""
+                        switch(data.dept){
+                            case 1: deptname="IT" ;break;
+                            case 2: deptname="Sales"; break;
+                            case 3: deptname="HR";break;
+                        }
+                        
                    %> 
-                   <a href="http://localhost:4005/<%= data.dept %> "> <%= deptname %> </a>
+                   <a href="http://localhost:4005/departmentList/<%= data.dept %>"> <%= deptname %> </a>
                 </td> 
-                   <!-- <td> <% 
-                       let deptno = data.dept
-                       let dept
-                       switch(dept) {
-                           case 1: "IT"
-                           break;
-                           case 2: "Sales"
-                           break;
-                           case 3: "HR"
-                           break;
-                      }  %>
-                   <%= dept %> 
-               
-               </td> -->
        
-               <td><a href='http://localhost:4005/deleterecord/ <%= i++ %>'><button>delete</button></a>
-       
-                   <a href='http://localhost:4005/updaterecord'><button>update</button></a>
+               <td>
+                <a href='http://localhost:4005/deleterecord/ <%= i++ %>'><button>delete</button></a> 
+                <a href='http://localhost:4005/updaterecord/<%= data.empno %>'><button>update</button></a>
+                
                </td>
        
                </tr>

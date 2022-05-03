@@ -1,0 +1,32 @@
+<html>
+
+<a href="http://localhost:4005/">Home</a>
+<br>
+<br>
+<h1>Edit record</h1>
+    <form action="http://localhost:4005/processupdateform" method="post">
+       Employee No:<input type="text" name="empno" value="<%= data.empno %>" readonly="read-only" > 
+       Employee Name: <input type="text" name="empname" value="<%= data.empname %>">
+       Salary: <input type="text" name="salary" value="<%= data.salary %>">
+
+      
+       <%
+       let ITselection=""
+       let Salesselection=""
+       let HRselection=""
+       switch(data.dept){
+           case 1: ITselection="selected"; break;
+           case 2: Salesselection="selected"; break;
+           case 3: HRselection="selected"; break;
+       }
+       
+  %> 
+
+       Department: <select name = "dept" value="<%= data.dept %>">
+        <option value = "1" <%= ITselection %> > IT</option>
+        <option value = "2" <%= Salesselection %> >Sales</option>
+        <option value = "3" <%= HRselection %> >HR</option>
+     </select>
+       <input type="submit">
+    </form>
+</html>
